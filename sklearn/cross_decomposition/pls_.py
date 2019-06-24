@@ -854,6 +854,7 @@ class PLSSVD(BaseEstimator, TransformerMixin):
         V = V.T
         self.x_scores_ = np.dot(X, U)
         self.y_scores_ = np.dot(Y, V)
+        self.singular_values = s
         self.x_weights_ = U
         self.y_weights_ = V
         return self
